@@ -1,0 +1,88 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Phone, Mail, Info } from "lucide-react"
+import { FaTiktok, FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6"
+
+export default function Footer() {
+  return (
+    <footer className="w-full bg-muted text-foreground border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Logo & Description */}
+        <div>
+          <div className="relative w-36 mb-4 aspect-[182/90]">
+            <Image
+              src="/logots.svg"
+              alt="Lebara Travel eSIM logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Stay connected anywhere with our revolutionary travel eSIM solution.
+            One eSIM, endless journeys.
+          </p>
+        </div>
+
+        {/* Support */}
+        <div>
+          <h3 className="font-semibold text-foreground mb-3">Support</h3>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center gap-2">
+              <Info size={16} className="text-primary" />
+              <Link href="#help" className="hover:text-secondary transition-colors">
+                Help and Support
+              </Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={16} className="text-primary" />
+              <a href="mailto:support@email.com" className="hover:text-secondary transition-colors">
+                support@email.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={16} className="text-primary" />
+              <a href="tel:7899078990" className="hover:text-secondary transition-colors">
+                78990 78990
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h3 className="font-semibold text-foreground mb-3">Legal</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link href="#terms" className="hover:text-secondary transition-colors">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link href="#privacy" className="hover:text-secondary transition-colors">
+                Privacy Policy
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Social */}
+        {/* <div>
+          <h3 className="font-semibold text-foreground mb-3">Follow us</h3>
+          <div className="flex items-center gap-4 text-primary text-lg">
+            <Link href="#"><FaTiktok /></Link>
+            <Link href="#"><FaFacebookF /></Link>
+            <Link href="#"><FaInstagram /></Link>
+            <Link href="#"><FaXTwitter /></Link>
+            <Link href="#"><FaYoutube /></Link>
+          </div>
+        </div> */}
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center py-4 border-t border-border text-sm text-muted-foreground">
+        © 2025 Lebara
+      </div>
+    </footer>
+  )
+}
