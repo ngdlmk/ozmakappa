@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Shield, Star, Zap, ShoppingCart, Download, Wifi } from 'lucide-react';
 import Image from 'next/image';
 import { Input } from '@/components/ui/input';
@@ -21,23 +20,21 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white w-full">
-     
-
-      <main className="pt-0 md:pt-28 w-full">
+      <main className="pt-0 md:pt-15 w-full">
         <section className="relative min-h-[90vh] flex items-center overflow-visible w-full">
           <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative flex flex-col lg:flex-row items-center">
               <div className="relative z-20 w-full lg:max-w-2xl space-y-8 py-4 text-center lg:text-left">
                 <div className="space-y-4">
-                  <p className="text-blue-600 font-medium text-sm">
+                  <p className="text-[#242fe3] font-medium text-sm">
                     Part of the trusted Lebara family, keeping people <br className="md:hidden" />connected since 2001.
                   </p>
 
-                  <Badge variant="secondary" className="bg-[#fcccf9] text-black border-0 px-5 py-2.5 text-md font-bold inline-block">
+                  <div className="bg-[#fcccf9] rounded-full text-black border-0 px-5 py-2.5 text-md font-bold inline-block">
                     🎉 MASSIVE 80% OFF LAUNCH SALE!
-                  </Badge>
+                  </div>
 
-                  <h1 className="text-5xl lg:text-7xl font-black text-blue-600 leading-[1.1]">
+                  <h1 className="text-5xl lg:text-7xl font-black text-[#242fe3] leading-[1.1]">
                     Introducing Lebara Travel eSIM
                   </h1>
 
@@ -54,7 +51,7 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="relative w-full lg:absolute lg:left-[45%] lg:top-1/2 lg:-translate-y-1/2 lg:w-[40%] lg:z-10 lg:mt-0">
+              <div className="relative w-full lg:absolute lg:left-[45%] lg:w-[50%] lg:z-10 lg:mt-0">
                 <div className="relative w-full aspect-square max-w-md mx-auto lg:max-w-none">
                   <Image
                     src="/3.png"
@@ -74,7 +71,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-[#f4f5fe] p-8 md:p-16" style={{ borderRadius: '0 4rem 0 4rem' }}>
               <div className="text-center space-y-6 mb-12">
-                <h2 className="text-4xl md:text-5xl font-black text-blue-600 leading-tight">
+                <h2 className="text-4xl md:text-5xl font-black text-[#242fe3] leading-tight">
                   80% Off Launch Special<br />
                   You're Invited First!
                 </h2>
@@ -89,7 +86,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row justify-between gap-8 mb-12 max-w-2xl mx-auto px-12">
                 <div className="flex flex-col gap-8 flex-1">
                   <div className="flex gap-3 items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 bg-[#242fe3] rounded-full flex items-center justify-center">
                       <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -99,7 +96,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex gap-3 items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 bg-[#242fe3] rounded-full flex items-center justify-center">
                       <Star className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -111,7 +108,7 @@ export default function Home() {
 
                 <div className="flex flex-col gap-8 flex-1">
                   <div className="flex gap-3 items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 bg-[#242fe3] rounded-full flex items-center justify-center">
                       <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -121,7 +118,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex gap-3 items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-12 h-12 bg-[#242fe3] rounded-full flex items-center justify-center">
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -137,10 +134,10 @@ export default function Home() {
                   <h3 className="text-3xl font-[1000] leading-[1.5] text-gray-900">
                     Get the Lebara<br />Travel eSIM app
                   </h3>
-                  
-                  <a 
-                    href="https://apps.apple.com" 
-                    target="_blank" 
+
+                  <a
+                    href="https://apps.apple.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"
                   >
@@ -152,7 +149,7 @@ export default function Home() {
                       </div>
                     </div>
                   </a>
-                  
+
                   <p className="text-md text-gray-900 font-medium pb-4">
                     Install once. Travel anywhere.
                   </p>
@@ -212,27 +209,27 @@ export default function Home() {
 
         <section id="how-it-works" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-gray-900">How It Works</h2>
-            
+            <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-gray-900">How It Works</h2>
+
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-gray-50 p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#f9f7f6] p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
+                <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShoppingCart className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-gray-900">Buy Plan</h3>
                 <p className="text-gray-600 text-sm">Purchase your lifetime eSIM for your device.</p>
               </div>
 
-              <div className="bg-gray-50 p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#f9f7f6] p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
+                <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Download className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-gray-900">Install eSIM</h3>
                 <p className="text-gray-600 text-sm">Download the app and install eSIM in seconds</p>
               </div>
 
-              <div className="bg-gray-50 p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-[#f9f7f6] p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
+                <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-gray-900">Enjoy Data</h3>
@@ -240,7 +237,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative mb-24 flex justify-center">
+            <div className="relative mb-24 mt-[230px] flex justify-center">
               <Image
                 src="/phone.png"
                 alt="Mobile App Screenshots"
@@ -251,11 +248,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        
       </main>
-
-      
     </div>
   );
 }
