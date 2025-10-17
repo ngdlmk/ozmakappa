@@ -83,7 +83,11 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased w-full overflow-x-hidden;
+  }
+  
+  html {
+    @apply w-full overflow-x-hidden;
   }
 }
 

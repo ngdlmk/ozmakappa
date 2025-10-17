@@ -36,9 +36,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div style={{ width: '100%', height: '100%', backgroundColor: 'red'}}>
+          <div className="w-full h-full">
             <Header />
-            <div style={{ flex: 1, display: 'flex', minHeight: '600px' }}>
+            <div className="flex-1 flex min-h-[600px]">
               {children}
             </div>
             <Footer />

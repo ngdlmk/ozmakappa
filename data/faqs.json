@@ -1,0 +1,104 @@
+{
+  "faqSections": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "questions": [
+        {
+          "id": "as-1",
+          "question": "What is an eSIM staging?",
+          "answer": "An eSIM (embedded SIM) is a digital SIM that lets you activate a mobile data plan without using a physical SIM card STAGING"
+        },
+        {
+          "id": "as-2",
+          "question": "How do I buy and install an eSIM?",
+          "answer": "Simply select your destination and data plan on our website or app, then follow the step-by-step installation guide. You'll receive an in-app installation prompt to activate the eSIM on your device."
+        },
+        {
+          "id": "as-3",
+          "question": "When should I install my eSIM?",
+          "answer": "You can install it before your trip, but we recommend activating it only once you arrive at your destination to ensure you get the full validity of your data plan."
+        },
+        {
+          "id": "as-4",
+          "question": "How do I know if my device is eSIM-compatible?",
+          "answer": "Check our Device Compatibility List or go to your phone settings and search for \"eSIM\" or \"Add Mobile Plan.\" Most recent iPhones, Google Pixels, and Samsung Galaxy models support eSIM."
+        }
+      ]
+    },
+    {
+      "id": "using-esim",
+      "title": "Using Your eSIM",
+      "questions": [
+        {
+          "id": "gs-1",
+          "question": "Can I use the eSIM for calls and SMS?",
+          "answer": "Our eSIMs are data-only. You can use apps like WhatsApp, FaceTime, Telegram, or iMessage to make calls and send messages over data."
+        },
+        {
+          "id": "gs-2",
+          "question": "How do I activate my eSIM?",
+          "answer": "Once installed, your eSIM will activate automatically when you connect to a network in your destination country. Make sure mobile data and data roaming are enabled for the eSIM profile."
+        }
+      ]
+    },
+    {
+      "id": "plans-pricing",
+      "title": "Plans and Pricing",
+      "questions": [
+        {
+          "id": "gs-3",
+          "question": "Can I use my home SIM and eSIM at the same time?",
+          "answer": "Yes. You can keep your physical SIM for calls/texts and use the eSIM for mobile data while abroad. Just make sure your data connection is set to the eSIM."
+        },
+        {
+          "id": "plan-1",
+          "question": "How long does each eSIM plan last?",
+          "answer": "Most plans are valid for 7, 15, or 30 days from the moment of activation, depending on your selection."
+        },
+        {
+          "id": "plan-2",
+          "question": "Are there any hidden fees or roaming charges?",
+          "answer": "No. All our plans are prepaid and fixed-price. There are no roaming fees or extra charges — what you see is what you pay."
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting",
+      "questions": [
+        {
+          "id": "ts-1",
+          "question": "I installed my eSIM but I'm not getting any service. What should I do?",
+          "answer": "1. Ensure mobile data and data roaming are enabled. 2. Check that your eSIM is selected as the active data line. 3. Restart your device. If issues persist, contact our support team via email."
+        },
+        {
+          "id": "ts-2",
+          "question": "Can I reinstall my eSIM if I delete it?",
+          "answer": "In most cases, eSIMs are single-use. If you delete it, you may need to purchase a new one. Please contact support for help if this happens."
+        },
+        {
+          "id": "ts-3",
+          "question": "Can I share data via hotspot/tethering?",
+          "answer": "Yes, most of our eSIM plans allow tethering. However, this depends on the local network operator — check your specific plan for details."
+        }
+      ]
+    },
+    {
+      "id": "account-support",
+      "title": "Account and Support",
+      "questions": [
+        {
+          "id": "use-1",
+          "question": "Do I need an account to buy an eSIM?",
+          "answer": "You can check out as a guest, but creating an account lets you manage multiple eSIMs, track data, and receive exclusive offers."
+        },
+        {
+          "id": "use-2",
+          "question": "How do I contact support?",
+          "answer": "Email us at lee.cross@lebara.com"
+        }
+      ]
+    }
+  ]
+}
