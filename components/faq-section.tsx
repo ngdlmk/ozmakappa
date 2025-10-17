@@ -40,9 +40,9 @@ export default function FAQSection({ sections }: FAQSectionProps) {
   };
 
   return (
-    <section className="bg-white mb-20">
+    <section className="bg-background mb-20">
       <div className="max-w-[780px] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-gray-900">
+        <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-foreground">
           Frequently Asked Questions
         </h2>
 
@@ -51,11 +51,11 @@ export default function FAQSection({ sections }: FAQSectionProps) {
             <div key={section.id}>
               <button
                 onClick={() => toggleSection(section.id)}
-                className="w-full cursor-pointer px-0 py-4 flex items-center justify-between bg-white transition-colors mb-4"
+                className="w-full cursor-pointer px-0 py-4 flex items-center justify-between bg-background transition-colors mb-4"
               >
-                <h3 className="text-2xl font-bold text-gray-900">{section.title}</h3>
+                <h3 className="text-2xl font-bold text-foreground">{section.title}</h3>
                 <ChevronDown 
-                  className={`w-6 h-6 text-gray-900 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-foreground transition-transform duration-300 ${
                     openSection === section.id ? 'rotate-180' : ''
                   }`}
                 />
@@ -70,14 +70,14 @@ export default function FAQSection({ sections }: FAQSectionProps) {
                   {section.questions.map((q) => (
                     <div 
                       key={q.id} 
-                      className="border-2 border-gray-900 overflow-hidden rounded-3xl"
+                      className="border-2 border-foreground overflow-hidden rounded-3xl bg-background dark:bg-muted"
                     >
                       <button
                         onClick={() => toggleQuestion(q.id)}
-                        className="w-full cursor-pointer px-3 py-2 flex items-center justify-between bg-white"
+                        className="w-full cursor-pointer px-3 py-2 flex items-center justify-between"
                       >
-                        <span className="text-base font-medium text-gray-900 text-left">{q.question}</span>
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full border-[2px] border-gray-900 bg-[#C5F82A] flex items-center justify-center ml-4">
+                        <span className="text-base font-medium text-foreground text-left">{q.question}</span>
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full border-[2px] border-black bg-[#C5F82A] flex items-center justify-center ml-4">
                           <Plus
                             className={`w-5 h-5 text-black transition-transform duration-300 ${
                               openQuestions.has(q.id) ? 'rotate-45' : ''
@@ -92,7 +92,7 @@ export default function FAQSection({ sections }: FAQSectionProps) {
                       >
                         <div className="overflow-hidden rounded-3xl">
                           <div className="px-6 pb-6 pt-2">
-                            <p className="text-base text-gray-700 leading-relaxed">{q.answer}</p>
+                            <p className="text-base text-muted-foreground leading-relaxed">{q.answer}</p>
                           </div>
                         </div>
                       </div>

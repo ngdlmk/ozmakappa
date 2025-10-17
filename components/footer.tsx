@@ -24,24 +24,23 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Support */}
         <div>
           <h3 className="font-semibold text-foreground mb-3">Support</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <Info size={16} className="text-primary" />
+              <Info size={16} className="text-[#4169E1]" />
               <Link href="#help" className="hover:text-secondary transition-colors">
                 Help and Support
               </Link>
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} className="text-primary" />
+              <Mail size={16} className="text-[#4169E1]" />
               <a href="mailto:support@email.com" className="hover:text-secondary transition-colors">
                 support@email.com
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <Phone size={16} className="text-primary" />
+              <Phone size={16} className="text-[#4169E1]" />
               <a href="tel:7899078990" className="hover:text-secondary transition-colors">
                 78990 78990
               </a>

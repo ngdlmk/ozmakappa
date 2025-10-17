@@ -37,18 +37,18 @@ export default function SupportPage() {
 
 
   return (
-    <div className="min-h-screen bg-white w-full">
+    <div className="min-h-screen bg-background w-full">
       <main className="w-full">
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-[#f9f7f6] p-8 md:p-8" style={{ borderRadius: '0 4rem 0 4rem' }}>
-              <h1 className="text-4xl md:text-5xl font-black text-center mb-8 text-gray-900">
+            <div className="bg-muted p-8 md:p-8" style={{ borderRadius: '0 4rem 0 4rem' }}>
+              <h1 className="text-4xl md:text-5xl font-black text-center mb-8 text-foreground">
                 Contact Us
               </h1>
 
               <form onSubmit={handleSubmit} className="space-y-6 max-w-[750px] mx-auto">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                     Name
                   </label>
                   <Input
@@ -57,13 +57,13 @@ export default function SupportPage() {
                     placeholder="Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-[#2833e4]"
+                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
                     Email
                   </label>
                   <Input
@@ -72,21 +72,21 @@ export default function SupportPage() {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-[#2833e4]"
+                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
                     required
                   />
                 </div>
 
                 <div className="relative">
-                  <label htmlFor="category" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="category" className="block text-sm font-medium mb-2 text-foreground">
                     Category
                   </label>
                   <button
                     type="button"
                     onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
-                    className="w-full h-12 px-4 rounded-full border border-gray-300 bg-white text-left flex items-center justify-between hover:border-[#2833e4] focus:border-[#2833e4] focus:ring-0 focus:outline-none transition-colors"
+                    className="w-full h-12 px-4 rounded-full border border-border bg-white dark:bg-white text-left flex items-center justify-between hover:border-primary focus:border-primary focus:ring-0 focus:outline-none transition-colors"
                   >
-                    <span className={category ? 'text-gray-900' : 'text-gray-400'}>
+                    <span className={category ? 'text-gray-900' : 'text-gray-500'}>
                       {category || 'Please select a category'}
                     </span>
                     <ChevronDown 
@@ -97,7 +97,7 @@ export default function SupportPage() {
                   </button>
                   
                   {showCategoryDropdown && (
-                    <div className="absolute z-10 w-full mt-2 bg-white rounded-3xl shadow-xl overflow-hidden py-2">
+                    <div className="absolute z-10 w-full mt-2 bg-white dark:bg-white rounded-3xl shadow-xl overflow-hidden py-2 border border-border">
                       {categories.map((cat, index) => (
                         <button
                           key={cat}
@@ -106,7 +106,7 @@ export default function SupportPage() {
                             setCategory(cat);
                             setShowCategoryDropdown(false);
                           }}
-                          className="w-full cursor-pointer px-6 py-3 text-left hover:bg-gray-50 text-gray-900 text-sm transition-colors"
+                          className="w-full cursor-pointer px-6 py-3 text-left hover:bg-gray-100 text-gray-900 text-sm transition-colors"
                         >
                           {cat}
                         </button>
@@ -116,7 +116,7 @@ export default function SupportPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2 text-foreground">
                     Subject
                   </label>
                   <Input
@@ -125,13 +125,13 @@ export default function SupportPage() {
                     placeholder="Subject"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-[#2833e4]"
+                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="orderNumber" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="orderNumber" className="block text-sm font-medium mb-2 text-foreground">
                     Order number (optional)
                   </label>
                   <Input
@@ -140,12 +140,12 @@ export default function SupportPage() {
                     placeholder="Order number (optional)"
                     value={orderNumber}
                     onChange={(e) => setOrderNumber(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-[#2833e4]"
+                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="deviceBrand" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="deviceBrand" className="block text-sm font-medium mb-2 text-foreground">
                     Device brand and model (optional)
                   </label>
                   <Input
@@ -154,12 +154,12 @@ export default function SupportPage() {
                     placeholder="Device brand and model (optional)"
                     value={deviceBrand}
                     onChange={(e) => setDeviceBrand(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-[#2833e4]"
+                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-900">
+                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
                     Description
                   </label>
                   <textarea
@@ -167,19 +167,19 @@ export default function SupportPage() {
                     placeholder="Description..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full h-42 placeholder-gray-300 text-gray-900 px-4 py-3 rounded-xl border border-gray-300 focus:border-[#2833e4] bg-white resize-none file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 disabled:cursor-not-allowed"
+                    className="w-full h-42 placeholder-gray-500 text-gray-900 px-4 py-3 rounded-xl border border-border focus:border-primary bg-white dark:bg-white resize-none file:text-foreground placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 disabled:cursor-not-allowed"
                     required
                   />
                 </div>
 
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-muted-foreground">
                   Your personal data will be processed in accordance with Lebara Travel eSIM's{' '}
                   <a href="#" className="text-[#242fe3] underline">Terms & Conditions</a>,{' '}
                   <a href="#" className="text-[#242fe3] underline">Privacy</a> and{' '}
                   <a href="#" className="text-[#242fe3] underline">Cookie Policy</a>
                 </p>
 
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-muted-foreground">
                   By clicking submit you confirm that you have read, understood and accepted our policies.
                 </p>
 

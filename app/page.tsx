@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white w-full">
+    <div className="min-h-screen bg-background w-full">
       <main className="pt-0 md:pt-15 w-full">
         <section className="relative min-h-[90vh] flex items-center overflow-visible w-full">
           <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ export default function Home() {
                     Introducing Lebara Travel eSIM
                   </h1>
 
-                  <p className="text-lg text-gray-900 max-w-lg leading-relaxed font-normal mx-auto lg:mx-0">
+                  <p className="text-lg text-foreground max-w-lg leading-relaxed font-normal mx-auto lg:mx-0">
                     We're excited to invite you to try our revolutionary<br />new Global eSIM covering 180+ countries.
                   </p>
                 </div>
@@ -67,9 +67,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="early-access" className="py-20 bg-white">
+        <section id="early-access" className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-[#f4f5fe] p-8 md:p-16" style={{ borderRadius: '0 4rem 0 4rem' }}>
+            <div className="bg-muted p-8 md:p-16" style={{ borderRadius: '0 4rem 0 4rem' }}>
               <div className="text-center space-y-6 mb-12">
                 <h2 className="text-4xl md:text-5xl font-black text-[#242fe3] leading-tight">
                   80% Off Launch Special<br />
@@ -77,8 +77,8 @@ export default function Home() {
                 </h2>
 
                 <div className="max-w-2xl mx-auto">
-                  <p className="text-sm md:text-base text-gray-800 text-center">
-                    <span className="font-bold text-gray-900">🎁 UNPRECEDENTED 80% DISCOUNT!</span> This is our biggest launch offer ever. As an invited trial user, you'll lock in this massive savings while helping us perfect our travel solution.
+                  <p className="text-sm md:text-base text-muted-foreground text-center">
+                    <span className="font-bold text-foreground">🎁 UNPRECEDENTED 80% DISCOUNT!</span> This is our biggest launch offer ever. As an invited trial user, you'll lock in this massive savings while helping us perfect our travel solution.
                   </p>
                 </div>
               </div>
@@ -90,8 +90,8 @@ export default function Home() {
                       <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-1 text-gray-900">Early Access</h3>
-                      <p className="text-gray-600 text-sm">Be first to try new features</p>
+                      <h3 className="font-bold text-lg mb-1 text-foreground">Early Access</h3>
+                      <p className="text-muted-foreground text-sm">Be first to try new features</p>
                     </div>
                   </div>
 
@@ -100,8 +100,8 @@ export default function Home() {
                       <Star className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-1 text-gray-900">Shape the future</h3>
-                      <p className="text-gray-600 text-sm">Your feedback matters</p>
+                      <h3 className="font-bold text-lg mb-1 text-foreground">Shape the future</h3>
+                      <p className="text-muted-foreground text-sm">Your feedback matters</p>
                     </div>
                   </div>
                 </div>
@@ -112,8 +112,8 @@ export default function Home() {
                       <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-1 text-gray-900">Lebara Trusted</h3>
-                      <p className="text-gray-600 text-sm">Backed by proven network</p>
+                      <h3 className="font-bold text-lg mb-1 text-foreground">Lebara Trusted</h3>
+                      <p className="text-muted-foreground text-sm">Backed by proven network</p>
                     </div>
                   </div>
 
@@ -122,8 +122,8 @@ export default function Home() {
                       <Zap className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-1 text-gray-900">Instant Activation</h3>
-                      <p className="text-gray-600 text-sm">Ready in minutes</p>
+                      <h3 className="font-bold text-lg mb-1 text-foreground">Instant Activation</h3>
+                      <p className="text-muted-foreground text-sm">Ready in minutes</p>
                     </div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function Home() {
 
               <div className="pt-8">
                 <div className="sm:hidden text-center space-y-6">
-                  <h3 className="text-3xl font-[1000] leading-[1.5] text-gray-900">
+                  <h3 className="text-3xl font-[1000] leading-[1.5] text-foreground">
                     Get the Lebara<br />Travel eSIM app
                   </h3>
 
@@ -150,20 +150,20 @@ export default function Home() {
                     </div>
                   </a>
 
-                  <p className="text-md text-gray-900 font-medium pb-4">
+                  <p className="text-md text-foreground font-medium pb-4">
                     Install once. Travel anywhere.
                   </p>
                 </div>
 
                 <div className="hidden sm:block">
-                  <h3 className="text-3xl md:text-4xl font-black text-center mb-3 text-gray-900">Get Access Now</h3>
-                  <p className="text-center text-gray-700 mb-8 max-w-xl mx-auto text-sm md:text-base px-4">
+                  <h3 className="text-3xl md:text-4xl font-black text-center mb-3 text-foreground">Get Access Now</h3>
+                  <p className="text-center text-muted-foreground mb-8 max-w-xl mx-auto text-sm md:text-base px-4">
                     Enter your email to receive a secure download link for our MVP app. Be among the first to explore, test, and enjoy exclusive launch benefits.
                   </p>
 
                   <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-900">
+                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
                         Email
                       </label>
                       <Input
@@ -172,13 +172,13 @@ export default function Home() {
                         placeholder="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-blue-600 focus:ring-blue-600"
+                        className="w-full h-12 px-4 rounded-full border-border focus:border-primary focus:ring-primary"
                         required
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="confirmEmail" className="block text-sm font-medium mb-2 text-gray-900">
+                      <label htmlFor="confirmEmail" className="block text-sm font-medium mb-2 text-foreground">
                         Confirm Email
                       </label>
                       <Input
@@ -187,7 +187,7 @@ export default function Home() {
                         placeholder="Email"
                         value={confirmEmail}
                         onChange={(e) => setConfirmEmail(e.target.value)}
-                        className="w-full h-12 px-4 rounded-full border-gray-300 focus:border-blue-600 focus:ring-blue-600"
+                        className="w-full h-12 px-4 rounded-full border-border focus:border-primary focus:ring-primary"
                         required
                       />
                     </div>
@@ -207,33 +207,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="how-it-works" className="py-20 bg-white">
+        <section id="how-it-works" className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-gray-900">How It Works</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-center mb-12 text-foreground">How It Works</h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-[#f9f7f6] p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
+              <div className="bg-muted p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
                 <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShoppingCart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-xl mb-3 text-gray-900">Buy Plan</h3>
-                <p className="text-gray-600 text-sm">Purchase your lifetime eSIM for your device.</p>
+                <h3 className="font-bold text-xl mb-3 text-foreground">Buy Plan</h3>
+                <p className="text-muted-foreground text-sm">Purchase your lifetime eSIM for your device.</p>
               </div>
 
-              <div className="bg-[#f9f7f6] p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
+              <div className="bg-muted p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
                 <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Download className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-xl mb-3 text-gray-900">Install eSIM</h3>
-                <p className="text-gray-600 text-sm">Download the app and install eSIM in seconds</p>
+                <h3 className="font-bold text-xl mb-3 text-foreground">Install eSIM</h3>
+                <p className="text-muted-foreground text-sm">Download the app and install eSIM in seconds</p>
               </div>
 
-              <div className="bg-[#f9f7f6] p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
+              <div className="bg-muted p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
                 <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-xl mb-3 text-gray-900">Enjoy Data</h3>
-                <p className="text-gray-600 text-sm">Enjoy global connectivity with ease.</p>
+                <h3 className="font-bold text-xl mb-3 text-foreground">Enjoy Data</h3>
+                <p className="text-muted-foreground text-sm">Enjoy global connectivity with ease.</p>
               </div>
             </div>
 
