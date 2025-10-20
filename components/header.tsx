@@ -5,10 +5,13 @@ import Link from "next/link"
 import { useState } from "react"
 import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
+import { useRouter, usePathname } from "next/navigation"
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { setTheme, theme } = useTheme()
+    const router = useRouter()
+    const pathname = usePathname()
 
     const toggleTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark")
@@ -32,21 +35,29 @@ export default function Header() {
                 <div className="hidden md:flex items-center gap-6">
                     <nav className="flex items-center gap-10 font-medium [&_a:visited]:text-[#0D1167]">
                         <Link
-                            href="#early-access"
+                            href="/#early-access"
                             className="header-nav-link text-[#4169E1] hover:text-[#1E40AF] dark:text-[#242fe3] dark:hover:text-[#C5F82A] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
+                                if (pathname === '/') {
+                                    document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    router.push('/#early-access');
+                                }
                             }}
                         >
                             Get Early Access
                         </Link>
                         <Link
-                            href="#how-it-works"
+                            href="/#how-it-works"
                             className="header-nav-link text-[#4169E1] hover:text-[#1E40AF] dark:text-[#242fe3] dark:hover:text-[#C5F82A] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                                if (pathname === '/') {
+                                    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    router.push('/#how-it-works');
+                                }
                             }}
                         >
                             How it Works
@@ -99,27 +110,35 @@ export default function Header() {
                 </button>
             </div>
 
-            <div className={`md:hidden absolute top-full left-0 right-0 bg-background z-40 shadow-lg border-b border-border overflow-hidden transition-all duration-500 ease-in-out ${
-                isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+            <div className={`md:hidden absolute top-full left-0 right-0 bg-background z-40 shadow-lg border-b border-border transition-all duration-300 ease-out ${
+                isMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-4 opacity-0 pointer-events-none'
             }`}>
                 <nav className="flex flex-col gap-6 px-6 py-8 text-[28px] font-semibold">
                         <Link
-                            href="#early-access"
+                            href="/#early-access"
                             className="header-nav-link-mobile dark:text-foreground hover:text-[#1E40AF] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
+                                if (pathname === '/') {
+                                    document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    router.push('/#early-access');
+                                }
                                 setIsMenuOpen(false);
                             }}
                         >
                             Get Early Access
                         </Link>
                         <Link
-                            href="#how-it-works"
+                            href="/#how-it-works"
                             className="header-nav-link-mobile dark:text-foreground hover:text-[#1E40AF] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                                if (pathname === '/') {
+                                    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    router.push('/#how-it-works');
+                                }
                                 setIsMenuOpen(false);
                             }}
                         >

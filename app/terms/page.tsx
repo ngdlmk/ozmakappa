@@ -4,17 +4,14 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-background w-full">
       <main className="w-full py-20">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h1 className="text-4xl md:text-5xl font-black text-center mb-4 text-gray-900 dark:text-gray-100">
-            Lebara Travel eSIM
+        <div className="max-w-7xl mx-auto px-6">
+          <h1 className="text-4xl font-[700] mb-5 text-gray-900 dark:text-gray-100">
+            Terms & Conditions
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#242fe3]">
-            Terms and Conditions
-          </h2>
 
           <div className="space-y-8 text-gray-800 dark:text-gray-200">
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Introduction</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">1. Introduction</h3>
               <p className="leading-relaxed mb-4">
                 These Terms and Conditions (Terms of Use) apply to your use of the Lebara Travel eSIM service (the Service) which is provided by Lebara Limited (a company incorporated in England and Wales with company number 04293563 with its registered office at 5th Floor, Broadwalk House, 5 Appold Street, London EC2A 2DA, United Kingdom) and its affiliates (referred to in these Terms of Use as Lebara, we, us, our).
               </p>
@@ -24,14 +21,14 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">The Service</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">2. The Service</h3>
               <p className="leading-relaxed">
                 The Service provides mobile data connectivity through an electronic SIM (eSIM) which can be purchased through the Lebara Travel App, together with associated data plans to be used with the eSIM. The Service is data-only and for use in supported countries.
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Eligibility and devices</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">3. Eligibility and devices</h3>
               <p className="leading-relaxed mb-4">
                 You must be at least 18 years old to use the Service.
               </p>
@@ -41,7 +38,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Accessing and using</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">4. Accessing and using</h3>
               <p className="leading-relaxed mb-4">
                 You can purchase an eSIM through the Lebara Travel App, together with a prepaid data plan to use with that eSIM. We offer different prepaid data plans, which may vary by country or region (subject to availability) and duration and data allowance. A data plan states its:
               </p>
@@ -66,7 +63,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Restrictions and fair use</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">5. Restrictions and fair use</h3>
               <p className="leading-relaxed mb-4">
                 The Service is for personal, non-commercial use and fair use policies apply. You agree not to:
               </p>
@@ -81,7 +78,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Payments</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">6. Payments</h3>
               <p className="leading-relaxed mb-4">
                 All payments for eSIM and associated data plans are through the Lebara Travel App and must be made using Apple Pay.
               </p>
@@ -94,7 +91,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Refunds</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">7. Refunds</h3>
               <p className="leading-relaxed mb-4">
                 If you purchase an eSIM or data plan through the Lebara Travel App, you have the right to cancel your order within 14 days of purchase and receive a refund, as long as you have not activated or used that eSIM or data plan.
               </p>
@@ -104,7 +101,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Data and privacy</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">8. Data and privacy</h3>
               <p className="leading-relaxed mb-4">
                 We may collect usage data and feedback to evaluate service performance and customer experience. You consent to the use of anonymised data for analysis and improvement of the Service.
               </p>
@@ -124,14 +121,14 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Intellectual Property</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">9. Intellectual Property</h3>
               <p className="leading-relaxed">
                 All content, trade marks, logos, software, and other intellectual property subsisting in the Service, the Lebara Travel App and our websites is owned by, or licensed to, Lebara and remains our property or that of our licensors. You may not copy Lebara's names, trademark, pictures, brands or logos.
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Limitations</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">10. Limitations</h3>
               <p className="leading-relaxed mb-4">You acknowledge that:</p>
               <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
                 <li>ESIMs and data plans are subject to availability and device compatibility.</li>
@@ -142,7 +139,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Liability</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">11. Liability</h3>
               <p className="leading-relaxed mb-4">To the extent permitted by law:</p>
               <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
                 <li>We exclude all warranties (whether express or implied).</li>
@@ -152,7 +149,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Termination</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">12. Termination</h3>
               <p className="leading-relaxed mb-4">
                 We may suspend or terminate your access to the Service and disqualify you from future use if you breach these Terms of Use.
               </p>
@@ -165,21 +162,21 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Changes to these Terms of Use</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">13. Changes to these Terms of Use</h3>
               <p className="leading-relaxed">
                 We may amend or update these Terms of Use from time to time and will post any material changes on the Lebara Travel App or on our websites. Your continued use of the Service constitutes your acceptance of updated terms.
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Governing law</h3>
+              <h3 className="text-[20px]font-bold mb-4 text-gray-900 dark:text-gray-100">14. Governing law</h3>
               <p className="leading-relaxed">
                 These Terms of Use are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Contact</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">15. Contact</h3>
               <p className="leading-relaxed mb-2">For support or queries, contact us at:</p>
               <p className="leading-relaxed">📧 <a href="mailto:support@lebaratravelessim.com" className="text-[#242fe3] underline">support@lebaratravelessim.com</a></p>
               <p className="leading-relaxed">📞 +44 20 1234 5678</p>

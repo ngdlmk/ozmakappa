@@ -4,13 +4,10 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-background w-full">
       <main className="w-full py-20">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h1 className="text-4xl md:text-5xl font-black text-center mb-4 text-gray-900 dark:text-gray-100">
-            Lebara Limited (Lebara Travel)
+        <div className="max-w-7xl mx-auto px-6">
+          <h1 className="text-4xl font-[700] mb-4 text-gray-900 dark:text-gray-100">
+            Privacy Policy
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#242fe3]">
-            Privacy Notice
-          </h2>
 
           <div className="space-y-8 text-gray-800 dark:text-gray-200">
             <p className="leading-relaxed">
@@ -18,14 +15,14 @@ export default function PrivacyPage() {
             </p>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">About us</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">1. About us</h3>
               <p className="leading-relaxed">
                 We are a mobile virtual network operator registered as Lebara Limited, a company incorporated in England (company number 04293563), with registered office 5th Floor, Broadwalk House, 5 Appold Street, London EC2A 2DA, United Kingdom.
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">How we process personal data and why</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">2. How we process personal data and why</h3>
               <p className="leading-relaxed mb-4">
                 We collect and use personal data as part of our service provision and customer relationship management with our customers, and as part of our interactions with prospective customers, including through engagement with our offers.
               </p>
@@ -218,7 +215,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Who we share personal data with</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">3. Who we share personal data with</h3>
               <p className="leading-relaxed mb-4">We share certain personal data as permitted by law:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>with Lebara Group companies (Lebara Limited, Lebara Service Centre Limited, Lebara Media Services PvT);</li>
@@ -230,7 +227,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">How we store and transfer personal data</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">4. How we store and transfer personal data</h3>
               <p className="leading-relaxed mb-4">
                 We implement appropriate technical and organisational security measures to protect personal data, such as encryption where appropriate.
               </p>
@@ -243,7 +240,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Marketing</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">5. Marketing</h3>
               <p className="leading-relaxed mb-4">
                 From time to time, we may send you marketing messages by email, SMS, MMS and within our app. You may change your marketing preferences:
               </p>
@@ -255,14 +252,14 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Cookies</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">6. Cookies</h3>
               <p className="leading-relaxed">
                 We use cookies for various purposes, including understanding how people use our website, products and services; remembering your preferences; and targeted advertising. You can find out more information about how we use cookies in our Cookie Notice.
               </p>
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Rights and Complaints</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">7. Rights and Complaints</h3>
               <p className="leading-relaxed mb-4">You have various rights relating to your personal data. These include the right to:</p>
               <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
                 <li>ask us for copies of the personal data we hold about you;</li>
@@ -285,7 +282,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Updates to this Privacy Notice</h3>
+              <h3 className="text-[20px] font-bold mb-4 text-gray-900 dark:text-gray-100">8. Updates to this Privacy Notice</h3>
               <p className="leading-relaxed">
                 This Privacy Notice was last updated on 15/10/2025. We may update this Privacy Notice from time to time. We therefore encourage you to review this Privacy Notice regularly. We will also notify you of changes made where required by law.
               </p>

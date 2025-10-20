@@ -1,8 +1,8 @@
 export default function CookiePolicy() {
   return (
     <div className="min-h-screen bg-background py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-5xl font-black text-foreground mb-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <h1 className="text-4xl font-[700] mb-4 text-gray-900 dark:text-gray-100">
           Cookie Notice
         </h1>
         
@@ -12,7 +12,7 @@ export default function CookiePolicy() {
           </p>
 
           <section>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">What are cookies?</h2>
+            <h2 className="text-[20px] font-bold mb-4">1. What are cookies?</h2>
             <p className="leading-relaxed">
               A cookie is a small text file that is downloaded onto a computer or a smartphone when the user accesses a app or an app. It allows the app/app to recognise that user's device and store some information about the user's preferences or past actions.
             </p>
@@ -22,7 +22,7 @@ export default function CookiePolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">How we use cookies</h2>
+            <h2 className="text-2xl font-bold mb-4">2. How we use cookies</h2>
             <p className="leading-relaxed mb-4">
               We use cookies to store and manage information in respect of our app and push notifications. We use both first-party cookies and third-party cookies. First-party cookies are set and used by us to help us to improve your experience on our app. For example, we use information from these cookies to remember your preferences and settings such as log-in details, and to monitor how our app is being used. Third-party cookies are set by third parties when you visit a part of our app that makes use of third-party analytics, marketing automation or management tools, or includes content displayed from a third-party app (such as social media). The information from these cookies helps us with our analytics and marketing, and helps to make advertising more relevant to you, for example.
             </p>
@@ -47,7 +47,7 @@ export default function CookiePolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">What cookies do we use?</h2>
+            <h2 className="text-2xl font-bold mb-6">3. What cookies do we use?</h2>
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-border">
                 <thead>
