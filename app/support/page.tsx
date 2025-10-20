@@ -265,7 +265,7 @@ export default function SupportPage() {
                   Your personal data will be processed in accordance with Lebara Travel eSIM's{' '}
                   <a href="/terms" className="text-[#242fe3] underline">Terms & Conditions</a>,{' '}
                   <a href="/privacy" className="text-[#242fe3] underline">Privacy</a> and{' '}
-                  <a href="/privacy" className="text-[#242fe3] underline">Cookie Policy</a>
+                  <a href="/cookie-policy" className="text-[#242fe3] underline">Cookie Policy</a>
                 </p>
 
                 <p className="text-xs text-muted-foreground">

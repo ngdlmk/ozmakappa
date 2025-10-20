@@ -18,7 +18,7 @@ export default function Footer() {
               priority
             />
           </div>
-          <p className="text-[16px] text-[#231F20] font-medium leading-relaxed">
+          <p className="text-[16px] text-[#231F20] font-[400] leading-relaxed">
             Stay connected anywhere with our revolutionary travel eSIM solution.
             One eSIM, endless journeys.
           </p>
@@ -79,7 +79,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="text-center footer-copyright py-4 pb-10">
+      <div className="text-center font-[500] footer-copyright py-4 pb-10">
         2025 © Lebara
       </div>
     </footer>

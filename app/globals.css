@@ -12,8 +12,24 @@
 
 @font-face {
   font-family: 'Vanilla';
+  src: url('/fonts/VanillaSansTRIAL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vanilla';
   src: url('/fonts/VanillaSansTRIAL-Medium.otf') format('opentype');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vanilla';
+  src: url('/fonts/VanillaSansTRIAL-SemiBold.otf') format('opentype');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -34,6 +50,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'LebaraSans';
+  src: url('/fonts/LebaraSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Dark mode handling */
 @custom-variant dark (&:is(.dark *));
 
@@ -41,7 +65,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: 'Vanilla', ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
   --color-ring: var(--ring);
   --color-input: var(--input);
@@ -154,9 +178,12 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
 
   .hero-lebara-title {
     @apply text-[96px];
-    font-family: 'Vanilla', sans-serif;
-    letter-spacing: -3px;
+    font-family: 'LebaraSans', 'Vanilla', sans-serif !important;
+    font-weight: 900 !important;
     color: #242fe3 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   .hero-subtitle {
@@ -169,12 +196,16 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
     font-family: 'Vanilla', sans-serif !important;
     font-size: 20px !important;
     font-weight: 600 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .hero-button-link {
     @apply bg-[#C5FF64] text-black;
     font-family: 'Vanilla', sans-serif !important;
-    font-size: 18px !important;
+    font-size: 17px !important;
     font-weight: 600 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Early Access Section Typography */
@@ -182,6 +213,8 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
     @apply text-[48px];
     font-family: 'Vanilla', sans-serif !important;
     font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .early-access-unprecedented {
@@ -192,6 +225,8 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
     @apply text-[20px];
     font-family: 'Vanilla', sans-serif !important;
     font-weight: 700 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .early-access-subtitle {
@@ -203,8 +238,11 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
 
   .get-access-now {
     @apply text-[32px];
-    font-family: 'Vanilla', sans-serif !important;
+    font-family: 'LebaraSans', 'Vanilla', sans-serif !important;
     font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* Form Typography */
@@ -243,18 +281,26 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
   /* How It Works Section Typography */
   .how-it-works-title {
     @apply text-[44px];
-    font-family: 'Vanilla', sans-serif !important;
-    font-weight: 700 !important;
+    font-family: 'LebaraSans', 'Vanilla', sans-serif !important;
+    font-weight: 900 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   .how-it-works-item-title {
     @apply text-[28px];
     font-family: 'Vanilla', sans-serif !important;
     font-weight: 700 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
   }
 
   .how-it-works-item-subtitle {
     @apply text-[20px];
+    color: black !important;
+    font-weight: 400 !important;
   }
 
   /* FAQ Section Typography */
@@ -262,12 +308,16 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
     @apply text-[20px];
     font-family: 'Vanilla', sans-serif !important;
     font-weight: 600 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .faq-main-title {
     @apply text-[48px];
     font-family: 'Vanilla', sans-serif !important;
-    font-weight: 900 !important;
+    font-weight: 800 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Footer Typography */
@@ -279,13 +329,15 @@ html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"
   .footer-support-heading {
     @apply text-[14px];
     font-family: 'Vanilla', sans-serif !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
   }
 
   /* Support/Contact Page Typography */
   .contact-us-title {
     font-family: 'Vanilla', sans-serif !important;
     font-weight: 700 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .footer-copyright {

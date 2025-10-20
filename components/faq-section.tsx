@@ -42,7 +42,7 @@ export default function FAQSection({ sections }: FAQSectionProps) {
   return (
     <section className="bg-background mb-20">
       <div className="max-w-[780px] mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="faq-main-title font-black text-center mb-12 text-foreground">
+        <h2 className="faq-main-title text-center mb-12 text-foreground">
           Frequently Asked Questions
         </h2>
 

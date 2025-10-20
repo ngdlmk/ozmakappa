@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background w-full">
-      <main className="pt-0 md:pt-15 w-full">
+      <main className="pt-0 md:pt-0 w-full">
         <section className="relative min-h-[90vh] flex items-center overflow-visible w-full">
           <div className="relative w-full max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
             <div className="relative flex flex-col lg:flex-row items-center">
@@ -92,7 +92,7 @@ export default function Home() {
                 </Button>
               </div>
 
-              <div className="relative w-full lg:absolute lg:left-[59%] lg:w-[45%] lg:z-10 lg:mt-0">
+              <div className="relative w-full lg:absolute lg:left-[56%] lg:w-[45%] lg:z-10 lg:mt-0">
                 <div className="relative w-full aspect-square mx-auto lg:max-w-none">
                   <Image
                     src="/3.png"
@@ -199,7 +199,7 @@ export default function Home() {
                 </div>
 
                 <div className="hidden sm:block">
-                  <h3 className="get-access-now text-3xl md:text-4xl text-center mb-3 text-gray-900 dark:text-gray-900">Get Access Now</h3>
+                  <h3 className="get-access-now text-center mb-3 text-gray-900 dark:text-gray-900">Get Access Now</h3>
                   <p className="text-center form-text mb-8 max-w-xl mx-auto text-sm md:text-base px-4 text-gray-700 dark:text-gray-700">
                     Enter your email to receive a secure download link for our MVP app. Be among the first to explore, test, and enjoy exclusive launch benefits.
                   </p>
@@ -258,31 +258,31 @@ export default function Home() {
 
         <section id="how-it-works" className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="how-it-works-title font-black text-center mb-12 text-foreground hidden md:block">How It Works</h2>
+            <h2 className="how-it-works-title text-center mb-12 hidden md:block">How It Works</h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16 mx-0 md:mx-0 lg:mx-24 hidden md:grid">
               <div className="bg-gray p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
                 <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShoppingCart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="how-it-works-item-title font-bold mb-3 text-foreground">Buy Plan</h3>
-                <p className="how-it-works-item-subtitle text-muted-foreground">Purchase your lifetime eSIM for your device.</p>
+                <h3 className="how-it-works-item-title mb-3 text-foreground dark:text-background">Buy Plan</h3>
+                <p className="how-it-works-item-subtitle text-black">Purchase your lifetime eSIM for your device.</p>
               </div>
 
               <div className="bg-gray p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
                 <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Download className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="how-it-works-item-title font-bold mb-3 text-foreground">Install eSIM</h3>
-                <p className="how-it-works-item-subtitle text-muted-foreground">Download the app and install eSIM in seconds</p>
+                <h3 className="how-it-works-item-title mb-3 text-foreground dark:text-background">Install eSIM</h3>
+                <p className="how-it-works-item-subtitle text-black">Download the app and install eSIM in seconds</p>
               </div>
 
               <div className="bg-gray p-8 text-center" style={{ borderRadius: '0 2rem 0 2rem' }}>
                 <div className="w-16 h-16 bg-[#242fe3] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="how-it-works-item-title font-bold mb-3 text-foreground">Enjoy Data</h3>
-                <p className="how-it-works-item-subtitle text-muted-foreground">Enjoy global connectivity with ease.</p>
+                <h3 className="how-it-works-item-title mb-3 text-foreground dark:text-background">Enjoy Data</h3>
+                <p className="how-it-works-item-subtitle text-black">Enjoy global connectivity with ease.</p>
               </div>
             </div>
 
