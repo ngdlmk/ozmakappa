@@ -15,10 +15,10 @@ export default function Header() {
     }
 
     return (
-        <header className="w-full bg-background text-foreground border-b border-border">
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <header className="w-full bg-background text-foreground relative z-50">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 bg-background">
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="relative w-36 sm:w-44 md:w-52 aspect-[182/90]">
+                    <div className="relative w-30 sm:w-36 md:w-42 aspect-[182/90]">
                         <Image
                             src="/logots.svg"
                             alt="Lebara Travel eSIM logo"
@@ -30,10 +30,10 @@ export default function Header() {
                 </Link>
 
                 <div className="hidden md:flex items-center gap-6">
-                    <nav className="flex items-center gap-10 text-sm font-medium [&_a:visited]:text-[#4169E1]">
+                    <nav className="flex items-center gap-10 font-medium [&_a:visited]:text-[#0D1167]">
                         <Link
                             href="#early-access"
-                            className="text-[#4169E1] hover:text-[#1E40AF] dark:hover:text-[#C5F82A] transition-colors"
+                            className="header-nav-link text-[#4169E1] hover:text-[#1E40AF] dark:text-[#242fe3] dark:hover:text-[#C5F82A] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
                                 document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
@@ -43,7 +43,7 @@ export default function Header() {
                         </Link>
                         <Link
                             href="#how-it-works"
-                            className="text-[#4169E1] hover:text-[#1E40AF] dark:hover:text-[#C5F82A] transition-colors"
+                            className="header-nav-link text-[#4169E1] hover:text-[#1E40AF] dark:text-[#242fe3] dark:hover:text-[#C5F82A] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
                                 document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
@@ -53,7 +53,7 @@ export default function Header() {
                         </Link>
                         <Link
                             href="/support"
-                            className="text-[#4169E1] hover:text-[#1E40AF] dark:hover:text-[#C5F82A] transition-colors"
+                            className="header-nav-link text-[#4169E1] hover:text-[#1E40AF] dark:text-[#242fe3] dark:hover:text-[#C5F82A] transition-colors"
                         >
                             Help and Support
                         </Link>
@@ -72,52 +72,40 @@ export default function Header() {
 
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="md:hidden cursor-pointer flex flex-col gap-1.5 p-2 z-50"
+                    className="md:hidden cursor-pointer z-50 relative"
                     aria-label="Menu"
                 >
-                    <span className="w-6 h-0.5 bg-foreground transition-all"></span>
-                    <span className="w-6 h-0.5 bg-foreground transition-all"></span>
-                    <span className="w-6 h-0.5 bg-foreground transition-all"></span>
-                </button>
-            </div>
-
-            {isMenuOpen && (
-                <div
-                    className="fixed inset-0 bg-black/50 z-40 md:hidden"
-                    onClick={() => setIsMenuOpen(false)}
-                />
-            )}
-
-            <div
-                className={`fixed top-0 right-0 h-full w-64 bg-background z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
-                    isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                }`}
-            >
-                <div className="flex flex-col p-6 gap-6">
-                    <button
-                        onClick={() => setIsMenuOpen(false)}
-                        className="self-end cursor-pointer p-2"
-                        aria-label="Close menu"
-                    >
+                    {isMenuOpen ? (
                         <svg
-                            className="w-6 h-6 text-foreground"
+                            className="w-9 h-9 text-foreground"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
+                            strokeWidth={2.5}
                         >
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                strokeWidth={2}
                                 d="M6 18L18 6M6 6l12 12"
                             />
                         </svg>
-                    </button>
+                    ) : (
+                        <div className="flex flex-col gap-1.5">
+                            <span className="w-[30px] h-[4px] border border-[#5b5b5b] rounded-full bg-foreground transition-all"></span>
+                            <span className="w-[30px] h-[4px] border border-[#5b5b5b] rounded-full bg-foreground transition-all"></span>
+                            <span className="w-[30px] h-[4px] border border-[#5b5b5b] rounded-full bg-foreground transition-all"></span>
+                        </div>
+                    )}
+                </button>
+            </div>
 
-                    <nav className="flex flex-col gap-4 text-base font-medium">
+            <div className={`md:hidden absolute top-full left-0 right-0 bg-background z-40 shadow-lg border-b border-border overflow-hidden transition-all duration-500 ease-in-out ${
+                isMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+            }`}>
+                <nav className="flex flex-col gap-6 px-6 py-8 text-[28px] font-semibold">
                         <Link
                             href="#early-access"
-                            className="text-[#4169E1] hover:text-[#1E40AF] dark:hover:text-[#C5F82A] transition-colors"
+                            className="header-nav-link-mobile dark:text-foreground hover:text-[#1E40AF] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
                                 document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
@@ -128,7 +116,7 @@ export default function Header() {
                         </Link>
                         <Link
                             href="#how-it-works"
-                            className="text-[#4169E1] hover:text-[#1E40AF] dark:hover:text-[#C5F82A] transition-colors"
+                            className="header-nav-link-mobile dark:text-foreground hover:text-[#1E40AF] transition-colors"
                             onClick={(e) => {
                                 e.preventDefault();
                                 document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
@@ -139,28 +127,33 @@ export default function Header() {
                         </Link>
                         <Link
                             href="/support"
-                            className="text-[#4169E1] hover:text-[#1E40AF] dark:hover:text-[#C5F82A] transition-colors"
+                            className="header-nav-link-mobile dark:text-foreground hover:text-[#1E40AF] transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Help and Support
+                            Contact Us
                         </Link>
                         
-                        <div className="pt-4 border-t border-border">
+                        <div className="pt-4">
                             <button
                                 onClick={toggleTheme}
-                                className="w-full flex cursor-pointer items-center justify-between p-3 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 border border-border/50 hover:border-primary/50 transition-all duration-300"
+                                className="flex items-center gap-3 text-[24px] font-semibold text-foreground hover:text-[#1E40AF] transition-colors"
                                 aria-label="Toggle theme"
                             >
-                                <span className="text-primary font-medium">Theme</span>
-                                <div className="relative w-6 h-6">
-                                    <Sun className="h-6 w-6 text-primary rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0 absolute" />
-                                    <Moon className="h-6 w-6 text-primary rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100 absolute" />
+                                <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                                    <Sun className="h-5 w-5 text-primary rotate-0 scale-100 transition-all duration-300 dark:-rotate-90 dark:scale-0 absolute" />
+                                    <Moon className="h-5 w-5 text-primary rotate-90 scale-0 transition-all duration-300 dark:rotate-0 dark:scale-100 absolute" />
                                 </div>
                             </button>
                         </div>
                     </nav>
                 </div>
-            </div>
+            
+            {isMenuOpen && (
+                <div 
+                    className="fixed top-[120px] left-0 right-0 bottom-0 bg-black/20 z-30 md:hidden"
+                    onClick={() => setIsMenuOpen(false)}
+                />
+            )}
         </header>
     )
 }

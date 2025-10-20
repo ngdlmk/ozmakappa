@@ -16,6 +16,11 @@ export default function SupportPage() {
   const [deviceBrand, setDeviceBrand] = useState('');
   const [message, setMessage] = useState('');
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const [categoryError, setCategoryError] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [subjectError, setSubjectError] = useState('');
+  const [messageError, setMessageError] = useState('');
 
   const categories = [
     'eSIM',
@@ -30,25 +35,82 @@ export default function SupportPage() {
 
   const faqSections = faqData.faqSections;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log({ name, email, category, message });
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    if (value && !validateEmail(value)) {
+      setEmailError('Please enter a valid email address');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    let hasError = false;
+    
+    if (!name.trim()) {
+      setNameError('Name is required');
+      hasError = true;
+    } else {
+      setNameError('');
+    }
+    
+    if (!email.trim()) {
+      setEmailError('Email is required');
+      hasError = true;
+    } else if (!validateEmail(email)) {
+      setEmailError('Please enter a valid email address');
+      hasError = true;
+    } else {
+      setEmailError('');
+    }
+    
+    if (!category) {
+      setCategoryError('Please select a category');
+      hasError = true;
+    } else {
+      setCategoryError('');
+    }
+    
+    if (!subject.trim()) {
+      setSubjectError('Subject is required');
+      hasError = true;
+    } else {
+      setSubjectError('');
+    }
+    
+    if (!message.trim()) {
+      setMessageError('Description is required');
+      hasError = true;
+    } else {
+      setMessageError('');
+    }
+    
+    if (hasError) {
+      return;
+    }
+
+  };
 
   return (
     <div className="min-h-screen bg-background w-full">
       <main className="w-full">
-        <section className="py-20 bg-background">
+        <section className="py-15 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-muted p-8 md:p-8" style={{ borderRadius: '0 4rem 0 4rem' }}>
-              <h1 className="text-4xl md:text-5xl font-black text-center mb-8 text-foreground">
+              <h1 className="contact-us-title text-4xl md:text-5xl font-black text-center mb-8 text-foreground">
                 Contact Us
               </h1>
 
               <form onSubmit={handleSubmit} className="space-y-6 max-w-[750px] mx-auto">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="name" className="form-label block font-medium mb-2 text-foreground">
                     Name
                   </label>
                   <Input
@@ -56,14 +118,20 @@ export default function SupportPage() {
                     type="text"
                     placeholder="Name"
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
+                    onChange={(e) => {
+                      setName(e.target.value);
+                      if (nameError) setNameError('');
+                    }}
+                    className={`form-input ${nameError ? 'border-red-500' : ''}`}
                     required
                   />
+                  {nameError && (
+                    <p className="text-red-500 text-sm mt-1">{nameError}</p>
+                  )}
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="email" className="form-label block font-medium mb-2 text-foreground">
                     Email
                   </label>
                   <Input
@@ -71,20 +139,26 @@ export default function SupportPage() {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
+                    onChange={(e) => handleEmailChange(e.target.value)}
+                    className={`form-input ${emailError ? 'border-red-500' : ''}`}
                     required
                   />
+                  {emailError && (
+                    <p className="text-red-500 text-sm mt-1">{emailError}</p>
+                  )}
                 </div>
 
                 <div className="relative">
-                  <label htmlFor="category" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="category" className="form-label block font-medium mb-2 text-foreground">
                     Category
                   </label>
                   <button
                     type="button"
-                    onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
-                    className="w-full h-12 px-4 rounded-full border border-border bg-white dark:bg-white text-left flex items-center justify-between hover:border-primary focus:border-primary focus:ring-0 focus:outline-none transition-colors"
+                    onClick={() => {
+                      setShowCategoryDropdown(!showCategoryDropdown);
+                      setCategoryError('');
+                    }}
+                    className={`form-input bg-white dark:bg-white text-left flex items-center justify-between focus:ring-0 ${categoryError ? 'border-red-500' : ''}`}
                   >
                     <span className={category ? 'text-gray-900' : 'text-gray-500'}>
                       {category || 'Please select a category'}
@@ -113,10 +187,13 @@ export default function SupportPage() {
                       ))}
                     </div>
                   )}
+                  {categoryError && (
+                    <p className="text-red-500 text-sm mt-1">{categoryError}</p>
+                  )}
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="subject" className="form-label block font-medium mb-2 text-foreground">
                     Subject
                   </label>
                   <Input
@@ -124,14 +201,20 @@ export default function SupportPage() {
                     type="text"
                     placeholder="Subject"
                     value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
+                    onChange={(e) => {
+                      setSubject(e.target.value);
+                      if (subjectError) setSubjectError('');
+                    }}
+                    className={`form-input ${subjectError ? 'border-red-500' : ''}`}
                     required
                   />
+                  {subjectError && (
+                    <p className="text-red-500 text-sm mt-1">{subjectError}</p>
+                  )}
                 </div>
 
                 <div>
-                  <label htmlFor="orderNumber" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="orderNumber" className="form-label block font-medium mb-2 text-foreground">
                     Order number (optional)
                   </label>
                   <Input
@@ -140,12 +223,12 @@ export default function SupportPage() {
                     placeholder="Order number (optional)"
                     value={orderNumber}
                     onChange={(e) => setOrderNumber(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
+                    className="form-input"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="deviceBrand" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="deviceBrand" className="form-label block font-medium mb-2 text-foreground">
                     Device brand and model (optional)
                   </label>
                   <Input
@@ -154,29 +237,35 @@ export default function SupportPage() {
                     placeholder="Device brand and model (optional)"
                     value={deviceBrand}
                     onChange={(e) => setDeviceBrand(e.target.value)}
-                    className="w-full h-12 px-4 rounded-full border-border focus:border-primary"
+                    className="form-input"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
+                  <label htmlFor="message" className="form-label block font-medium mb-2 text-foreground">
                     Description
                   </label>
                   <textarea
                     id="message"
                     placeholder="Description..."
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="w-full h-42 placeholder-gray-500 text-gray-900 px-4 py-3 rounded-xl border border-border focus:border-primary bg-white dark:bg-white resize-none file:text-foreground placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 disabled:cursor-not-allowed"
+                    onChange={(e) => {
+                      setMessage(e.target.value);
+                      if (messageError) setMessageError('');
+                    }}
+                    className={`form-textarea h-42 placeholder-gray-500 text-gray-900 bg-white dark:bg-white file:text-foreground placeholder:text-gray-500 ${messageError ? 'border-red-500' : ''}`}
                     required
                   />
+                  {messageError && (
+                    <p className="text-red-500 text-sm mt-1">{messageError}</p>
+                  )}
                 </div>
 
                 <p className="text-xs text-muted-foreground">
                   Your personal data will be processed in accordance with Lebara Travel eSIM's{' '}
-                  <a href="#" className="text-[#242fe3] underline">Terms & Conditions</a>,{' '}
-                  <a href="#" className="text-[#242fe3] underline">Privacy</a> and{' '}
-                  <a href="#" className="text-[#242fe3] underline">Cookie Policy</a>
+                  <a href="/terms" className="text-[#242fe3] underline">Terms & Conditions</a>,{' '}
+                  <a href="/privacy" className="text-[#242fe3] underline">Privacy</a> and{' '}
+                  <a href="/privacy" className="text-[#242fe3] underline">Cookie Policy</a>
                 </p>
 
                 <p className="text-xs text-muted-foreground">
@@ -186,7 +275,7 @@ export default function SupportPage() {
                 <div className='flex justify-center items-center pt-3'>
                   <Button
                   type="submit"
-                  className="w-[320px] cursor-pointer bg-[#C5F82A] hover:bg-[#b5e820] text-black font-bold text-base h-12 rounded-full border-2 border-black shadow-sm hover:shadow-md transition-all"
+                  className="hero-button-link !bg-[#C5FF64] w-[320px] cursor-pointer hover:!bg-[#b0e850] !text-black font-bold h-12 rounded-full border-2 border-black shadow-sm hover:shadow-md transition-all"
                 >
                   Submit Request
                 </Button>

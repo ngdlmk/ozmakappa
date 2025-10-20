@@ -1,6 +1,39 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Font Faces */
+@font-face {
+  font-family: 'Vanilla';
+  src: url('/fonts/VanillaSansTRIAL-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vanilla';
+  src: url('/fonts/VanillaSansTRIAL-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vanilla';
+  src: url('/fonts/VanillaSansTRIAL-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vanilla';
+  src: url('/fonts/VanillaSansTRIAL-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Dark mode handling */
 @custom-variant dark (&:is(.dark *));
 
@@ -19,6 +52,7 @@
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-gray: var(--gray);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
 }
@@ -30,6 +64,7 @@
   /* Base */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --gray: oklch(0.97 0 0);
 
   /* Brand Colors */
   --primary: oklch(0.45 0.25 300);
@@ -94,4 +129,179 @@
 html *:not([class*="transition"]):not([class*="animate"]):not([class*="duration"]):not([style*="transition"]) {
   transition: background-color 0.5s ease-in-out,
               border-color 0.5s ease-in-out;
+}
+
+/* Typography System */
+@layer components {
+  /* Header Typography */
+  .header-nav-link {
+    @apply text-[20px];
+    font-family: 'Vanilla', sans-serif !important;
+  }
+
+  .header-nav-link-mobile {
+    @apply text-[20px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 500 !important;
+    color: #0D1167 !important;
+  }
+
+  /* Hero Section Typography */
+  .hero-massive-badge {
+    @apply text-[24px];
+    font-family: 'Vanilla', sans-serif !important;
+  }
+
+  .hero-lebara-title {
+    @apply text-[96px];
+    font-family: 'Vanilla', sans-serif;
+    letter-spacing: -3px;
+    color: #242fe3 !important;
+  }
+
+  .hero-subtitle {
+    @apply text-[24px];
+    font-family: 'Vanilla', sans-serif;
+  }
+
+  .hero-button {
+    @apply bg-[#C5FF64] text-black;
+    font-family: 'Vanilla', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+  .hero-button-link {
+    @apply bg-[#C5FF64] text-black;
+    font-family: 'Vanilla', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Early Access Section Typography */
+  .early-access-discount-text {
+    @apply text-[48px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 900 !important;
+  }
+
+  .early-access-unprecedented {
+    @apply text-[20px];
+  }
+
+  .early-access-heading {
+    @apply text-[20px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 700 !important;
+  }
+
+  .early-access-subtitle {
+    @apply text-[14px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 400 !important;
+    color: black !important;
+  }
+
+  .get-access-now {
+    @apply text-[32px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 900 !important;
+  }
+
+  /* Form Typography */
+  .form-label {
+    @apply text-[14px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 500 !important;
+  }
+
+  .form-text {
+    @apply text-[14px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 500 !important;
+  }
+
+  .form-input {
+    @apply w-full h-12 px-4 rounded-full border border-border transition-all duration-200;
+  }
+
+  .form-input:focus {
+    border-color: #242fe3 !important;
+    outline: none;
+    box-shadow: 0 0 0 1px #242fe3;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 rounded-xl border border-border transition-all duration-200 resize-none;
+  }
+
+  .form-textarea:focus {
+    border-color: #242fe3 !important;
+    outline: none;
+    box-shadow: 0 0 0 1px #242fe3;
+  }
+
+  /* How It Works Section Typography */
+  .how-it-works-title {
+    @apply text-[44px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 700 !important;
+  }
+
+  .how-it-works-item-title {
+    @apply text-[28px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 700 !important;
+  }
+
+  .how-it-works-item-subtitle {
+    @apply text-[20px];
+  }
+
+  /* FAQ Section Typography */
+  .faq-getting-started {
+    @apply text-[20px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 600 !important;
+  }
+
+  .faq-main-title {
+    @apply text-[48px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 900 !important;
+  }
+
+  /* Footer Typography */
+  .footer-support-text {
+    @apply text-[14px] text-[#242FE3];
+    font-family: 'Vanilla', sans-serif !important;
+  }
+
+  .footer-support-heading {
+    @apply text-[14px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 400 !important;
+  }
+
+  /* Support/Contact Page Typography */
+  .contact-us-title {
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 700 !important;
+  }
+
+  .footer-copyright {
+    @apply text-[16px] text-[#6b7280];
+    font-family: 'Vanilla', sans-serif !important;
+  }
+
+  .faq-question {
+    @apply text-[14px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 500 !important;
+  }
+
+  .faq-answer {
+    @apply text-[14px];
+    font-family: 'Vanilla', sans-serif !important;
+    font-weight: 400 !important;
+  }
 }

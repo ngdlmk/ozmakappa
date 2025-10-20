@@ -5,7 +5,7 @@ import { FaTiktok, FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from "react
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-muted text-foreground border-t border-border">
+    <footer className="w-full bg-[#f4f5fe] text-foreground">
       <div className="mx-auto max-w-7xl px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & Description */}
         <div>
@@ -18,30 +18,30 @@ export default function Footer() {
               priority
             />
           </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
+          <p className="text-[16px] text-[#231F20] font-medium leading-relaxed">
             Stay connected anywhere with our revolutionary travel eSIM solution.
             One eSIM, endless journeys.
           </p>
         </div>
 
         <div>
-          <h3 className="font-semibold text-foreground mb-3">Support</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="footer-support-heading font-semibold text-[16px] text-[#231F20] mb-3">Support</h3>
+          <ul className="space-y-2">
             <li className="flex items-center gap-2">
-              <Info size={16} className="text-[#4169E1]" />
-              <Link href="#help" className="hover:text-secondary transition-colors">
+              <Info size={16} className="text-[#242FE3]" />
+              <Link href="/support" className="footer-support-text hover:text-secondary transition-colors">
                 Help and Support
               </Link>
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} className="text-[#4169E1]" />
-              <a href="mailto:support@email.com" className="hover:text-secondary transition-colors">
+              <Mail size={16} className="text-[#242FE3]" />
+              <a href="mailto:support@email.com" className="footer-support-text hover:text-secondary transition-colors">
                 support@email.com
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <Phone size={16} className="text-[#4169E1]" />
-              <a href="tel:7899078990" className="hover:text-secondary transition-colors">
+              <Phone size={16} className="text-[#242FE3]" />
+              <a href="tel:+7899078990" className="footer-support-text hover:text-secondary transition-colors">
                 78990 78990
               </a>
             </li>
@@ -50,15 +50,15 @@ export default function Footer() {
 
         {/* Legal */}
         <div>
-          <h3 className="font-semibold text-foreground mb-3">Legal</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="footer-support-heading font-semibold text-[16px] text-[#231F20] mb-3">Legal</h3>
+          <ul className="space-y-2">
             <li>
-              <Link href="#terms" className="hover:text-secondary transition-colors">
+              <Link href="/terms" className="footer-support-text hover:text-secondary transition-colors">
                 Terms & Conditions
               </Link>
             </li>
             <li>
-              <Link href="#privacy" className="hover:text-secondary transition-colors">
+              <Link href="/privacy" className="footer-support-text hover:text-secondary transition-colors">
                 Privacy Policy
               </Link>
             </li>
@@ -79,8 +79,8 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="text-center py-4 border-t border-border text-sm text-muted-foreground">
-        © 2025 Lebara
+      <div className="text-center footer-copyright py-4 pb-10">
+        2025 © Lebara
       </div>
     </footer>
   )
